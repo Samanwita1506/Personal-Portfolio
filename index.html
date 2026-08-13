@@ -70,11 +70,10 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-logo {
-    font-family: var(--mono);
-    font-size: 0.85rem;
-    color: var(--accent3);
-    letter-spacing: 0.1em;
-  }
+  height: 38px;
+  width: auto;
+  display: block;
+}
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
     text-decoration: none;
@@ -606,7 +605,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">SM</div>
+  <img src="LOGO.png" alt="SM.DEV Logo" class="nav-logo">
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -938,17 +937,6 @@
       if (!child.style.transitionDelay) child.style.transitionDelay = i * 0.1 + 's';
     });
   });
-
-  // Typed effect for nav logo
-  const logo = document.querySelector('.nav-logo');
-  const text = 'sm.dev_';
-  let i = 0;
-  logo.textContent = '';
-  const typeInterval = setInterval(() => {
-    logo.textContent += text[i];
-    i++;
-    if (i >= text.length) clearInterval(typeInterval);
-  }, 120);
 
   // Smooth nav active state
   const sections = document.querySelectorAll('section');
